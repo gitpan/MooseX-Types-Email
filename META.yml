@@ -26,4 +26,5 @@ requires:
   MooseX::Types::Common: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.001
+  repository: http://github.com/bobtfish/moosex-types-email/tree/master
+version: 0.002
