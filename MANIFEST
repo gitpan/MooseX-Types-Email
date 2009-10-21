@@ -15,6 +15,7 @@ MANIFEST.SKIP
 META.yml
 README
 t/00-load.t
+t/01-email-abstract.t
 t/01-email.t
 t/author/pod-coverage.t
 t/author/pod.t
