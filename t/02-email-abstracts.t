@@ -1,8 +1,9 @@
 use strict;
 use warnings;
 use Test::More tests => 2;
+use Test::Deep;
 
-use MooseX::Types::Email qw/EmailMessage/;
+use MooseX::Types::Email qw/EmailMessages/;
 
 my $valid = <<'VALID';
 From: example@example.com
@@ -16,13 +17,13 @@ VALID
 my $es = Email::Simple->new($valid);
 
 ok(
-    EmailMessage->check($es),
-    'example email is an ok email',
+    EmailMessages->check([ $es ]),
+    'example list of email(s) is an ok list of emails',
 );
 
 like(
-    EmailMessage->validate($valid),
+    EmailMessages->validate([ $valid ]),
     qr/something Email::Abstract recognizes/,
-    'validation fails, as string is not a valid email body',
+    'validation fails, as list of strings are not valid email bodies',
 );
 

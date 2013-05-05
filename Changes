@@ -1,12 +1,17 @@
-0.004  29-04-2011
+
+0.005  2013-05-05
+  - Add EmailAddresses and EmailMessages types (ether)
+  - use Str as a base, not NonEmptySimpleStr (RT#63578)
+
+0.004  2011-04-29
   - Fix documentation links (abraxxa)
 
-0.003  21-10-2009
+0.003  2009-10-21
   - Support an EmailMessage type using Email::Abstract
 
-0.002  10-09-2009
+0.002  2009-09-10
   - Fix test failure
 
-0.001  02-07-2009
+0.001  2009-07-02
   - First version
 

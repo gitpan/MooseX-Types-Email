@@ -9,18 +9,17 @@ if ($Module::Install::AUTHOR) {
 name 'MooseX-Types-Email';
 all_from 'lib/MooseX/Types/Email.pm';
 
-requires 'Moose';
+requires 'MooseX::Types::Moose';
 requires 'MooseX::Types::Common';
 requires 'Email::Valid';
 requires 'Email::Abstract';
 
 test_requires 'Test::More';
-test_requires 'Test::Exception';
-test_requires 'namespace::autoclean';
+test_requires 'Test::Deep';
 
 author_tests 't/author';
 
-resources repository => 'http://github.com/bobtfish/moosex-types-email/tree/master';
+auto_set_repository;
 
 WriteAll();
 
