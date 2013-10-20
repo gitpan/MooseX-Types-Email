@@ -1,3 +1,8 @@
+Revision history for MooseX-Types-Email
+
+0.006     2013-10-20 05:14:24Z (Karen Etheridge)
+  - converted to Dist::Zilla
+  - repository migrated to the github moose organization
 
 0.005  2013-05-05
   - Add EmailAddresses and EmailMessages types (ether)

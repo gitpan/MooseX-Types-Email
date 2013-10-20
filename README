@@ -1,0 +1,13 @@
+
+
+This archive contains the distribution MooseX-Types-Email,
+version 0.006:
+
+  Email address validation type constraints for Moose.
+
+This software is copyright (c) 2009 by Tomas Doran (t0m).
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+

@@ -1,12 +1,20 @@
 package MooseX::Types::Email;
+BEGIN {
+  $MooseX::Types::Email::AUTHORITY = 'cpan:BOBTFISH';
+}
+{
+  $MooseX::Types::Email::VERSION = '0.006';
+}
+# git description: 2a8e05c
+
+# ABSTRACT: Email address validation type constraints for Moose.
+
 use MooseX::Types
     -declare => [qw/EmailAddress EmailMessage EmailAddresses EmailMessages/];
 
 use MooseX::Types::Moose qw/Object ArrayRef Str/;
 use Email::Valid;
 use Email::Abstract;
-
-our $VERSION = '0.005';
 
 subtype EmailAddress,
   as Str,
@@ -40,9 +48,19 @@ subtype EmailMessages,
 
 1;
 
+__END__
+
+=pod
+
+=encoding UTF-8
+
 =head1 NAME
 
 MooseX::Types::Email - Email address validation type constraints for Moose.
+
+=head1 VERSION
+
+version 0.006
 
 =head1 SYNOPSIS
 
@@ -56,7 +74,6 @@ MooseX::Types::Email - Email address validation type constraints for Moose.
 
     has emails => ( isa => EmailAddresses, required => 1, is => 'ro' );
     has messages => ( isa => EmailMessages, required => 1, is => 'ro' );
-
 
 =head1 DESCRIPTION
 
@@ -82,28 +99,27 @@ leniency of Email::Abstract.
 
 =back
 
-=head1 AUTHORS
-
-Tomas Doran (t0m) C<< <bobtfish@bobtfish.net> >>
+=head1 ORIGIN
 
 Shamelessly extracted from L<Reaction::Types::Email>.
 
-=head1 CONTRIBUTORS
+=head1 ACKNOWLEDGEMENTS
 
-Chris Nehren C<< <apeiron@cpan.org> >> added support for validing email
+Chris Nehren C<< <apeiron@cpan.org> >> added support for validating email
 messages.
 
 Karen Etheridge C<< <ether@cpan.org> >> added support for lists of email
 addresses and messages.
 
-=head1 COPYRIGHT
+=head1 AUTHOR
 
-Copyright 2009 the above L<AUTHORS> and L<CONTRIBUTORS>.
+Tomas Doran (t0m) <bobtfish@bobtfish.net
 
-=head1 LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-This library is free software, you can redistribute it and/or modify it under the same
-terms as Perl itself.
+This software is copyright (c) 2009 by Tomas Doran (t0m).
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
-
